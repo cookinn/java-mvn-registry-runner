@@ -1,5 +1,5 @@
 #!/bin/bash
-PASSWORD=mvn --encrypt-password ${GITHUB_TOKEN}
+PASSWORD=`mvn --encrypt-password ${GITHUB_TOKEN}`
 
 echo "
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"

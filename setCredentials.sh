@@ -1,7 +1,5 @@
 #!/bin/bash
 echo "Setting credentials"
-PASSWORD=`mvn --encrypt-password ${GITHUB_TOKEN}`
-echo "Encrypted password: ${PASSWORD}"
 
 echo "
 <settings xmlns=\"http://maven.apache.org/SETTINGS/1.0.0\"
@@ -28,7 +26,7 @@ echo "
   <servers>
     <id>github</id>
     <username>${GITHUB_ACTOR}</username>
-    <password>${PASSWORD}</password>
+    <password>${GITHUB_TOKEN}</password>
   </servers>
 </settings>" > /root/.m2/settings.xml
 

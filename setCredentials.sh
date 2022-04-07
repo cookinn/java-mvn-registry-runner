@@ -8,9 +8,11 @@ echo "
                       http://maven.apache.org/xsd/settings-1.0.0.xsd\">
 
   <servers>
-    <id>github</id>
-    <username>${GITHUB_ACTOR}</username>
-    <password>${GITHUB_TOKEN}</password>
+    <server>
+      <id>github</id>
+      <username>${GITHUB_ACTOR}</username>
+      <password>${GITHUB_TOKEN}</password>
+    </server>
   </servers>
 </settings>" > /root/.m2/settings.xml
 

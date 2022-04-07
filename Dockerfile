@@ -1,8 +1,6 @@
 FROM alpine:latest
 
-RUN apt update & apt upgrade -y
-
-# Install Maven
-RUN apt-get install openjdk-11-jdk maven -y
+# Install Java and Maven
+RUN apk add openjdk11 && apk add maven && export PATH=${PATH}:${JAVA_HOME}/bin
 
 COPY setCredentials.sh /data/setCredentials.sh

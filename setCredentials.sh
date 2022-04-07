@@ -12,6 +12,6 @@ echo "
     <username>${GITHUB_ACTOR}</username>
     <password>${GITHUB_TOKEN}</password>
   </servers>
-</settings>" > ~/.m2/settings.xml
+</settings>" > /root/.m2/settings.xml
 
 echo "Credentials set"

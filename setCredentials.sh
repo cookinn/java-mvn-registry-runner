@@ -13,6 +13,10 @@ then
   exit 1
 fi
 
+# Ensure the Maven directory exists. This is normally not created until a Maven command is run, so
+# this can lead to issues: https://stackoverflow.com/a/46983462/5278606
+mkdir -p /root/.m2
+
 echo "
 <settings xmlns=\"http://maven.apache.org/SETTINGS/1.0.0\"
   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"

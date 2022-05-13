@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/bin/sh
 echo "Setting credentials"
 
-if [[ -z "${GITHUB_ACTOR}" ]]
+if [ -z "${GITHUB_ACTOR}" ]
 then
   echo "GITHUB_ACTOR environment variable is not set. This should specify the GitHub user that will interact with the Maven repository." >&2
   exit 1
 fi
 
-if [[ -z "${GITHUB_TOKEN}" ]]
+if [ -z "${GITHUB_TOKEN}" ]
 then
   echo "GITHUB_TOKEN environment variable is not set. This should specify the token for the GitHub user." >&2
   exit 1
